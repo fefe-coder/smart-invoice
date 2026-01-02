@@ -1,0 +1,34 @@
+# Dependency directories (tieto priečinky sú obrovské a netreba ich na Git)
+node_modules/
+smart-invoice-web/node_modules/
+smart-invoice/node_modules/
+
+# Build outputs (tieto súbory generuje Electron/Vite a GitHub ich neprijme kvôli veľkosti)
+dist/
+smart-invoice-web/dist/
+out/
+build/
+
+# Binárne súbory aplikácie
+*.exe
+*.dmg
+*.app
+*.zip
+*.deb
+*.rpm
+
+# Databázy a lokálne dáta
+*.sqlite
+database.sqlite
+
+# Logy a systémové súbory
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.DS_Store
+Thumbs.db
+
+# Environment variables (obsahujú citlivé údaje)
+.env
+.env.local

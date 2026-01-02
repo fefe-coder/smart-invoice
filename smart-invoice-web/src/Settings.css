@@ -1,0 +1,127 @@
+/* Settings.css - Prémiový Dark Mode */
+
+.settings-container {
+  width: 100%;
+  max-width: 700px; /* Mierne zúžené pre lepší čitateľský zážitok */
+  margin: 30px auto;
+  padding: 0 20px;
+  animation: fadeIn 0.4s ease-out; /* Jemný nabeh pri otvorení */
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.settings-card {
+  background: #1B2E3C; 
+  border: 1px solid rgba(243, 227, 226, 0.08);
+  border-radius: 24px;
+  padding: 45px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.settings-title {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 35px;
+  color: #F3E3E2;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* SEKCIÁLNE NADPISY - aby to nebol len jeden dlhý zoznam */
+.form-divider {
+  width: 100%;
+  height: 1px;
+  background: rgba(243, 227, 226, 0.1);
+  margin: 25px 0;
+}
+
+.settings-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1 1 calc(50% - 10px); 
+  min-width: 250px;
+}
+
+.full-width {
+  flex: 1 1 100% !important;
+}
+
+.input-label {
+  font-size: 10px;
+  font-weight: 800;
+  color: rgba(243, 227, 226, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding-left: 4px;
+}
+
+.settings-input {
+  width: 100%;
+  background: #0C0C1E !important;
+  border: 1px solid rgba(243, 227, 226, 0.15) !important;
+  border-radius: 12px !important;
+  padding: 15px 20px !important;
+  color: #F3E3E2 !important;
+  font-size: 15px !important;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+}
+
+/* EFEKT PRI KLIKNUTÍ - jemne modré podsvietenie */
+.settings-input:focus {
+  border-color: #F3E3E2 !important;
+  background: #12122b !important;
+  box-shadow: 0 0 0 4px rgba(243, 227, 226, 0.05);
+}
+
+/* Tlačidlo - Odolné voči spučeniu */
+.save-btn {
+  background: #F3E3E2 !important;
+  color: #0C0C1E !important;
+  border: none;
+  padding: 18px 30px;
+  border-radius: 14px;
+  font-weight: 800;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 30px;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.save-btn:hover {
+  background: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.save-btn:active {
+  transform: translateY(0);
+}
+
+/* Špeciálne pre ikony v tlačidle */
+.save-btn svg {
+  transition: transform 0.2s;
+}
+
+.save-btn:hover svg {
+  transform: rotate(10deg) scale(1.1);
+}

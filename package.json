@@ -1,0 +1,38 @@
+{
+  "name": "smartinvoceapp",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "com.smartinvoice.app",
+    "productName": "SmartInvoice",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "smart-invoice/**/*",
+      "smart-invoice-web/build/**/*"
+    ],
+    "mac": {
+      "category": "public.app-category.finance",
+      "target": [
+        "dmg"
+      ]
+    },
+    "win": {
+      "target": "portable",
+      "artifactName": "SmartInvoice_v${version}.${ext}"
+    }
+  },
+  "devDependencies": {
+    "electron": "^39.2.7",
+    "electron-builder": "^24.13.3"
+  },
+  "dependencies": {
+    "electron-is-dev": "^2.0.0"
+  }
+}
